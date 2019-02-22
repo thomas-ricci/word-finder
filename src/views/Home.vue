@@ -1,18 +1,32 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+.home
+  header
+    h1 Word Finder
+  main
+    WordRules
+    ResultsList
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import WordRules from '@/components/WordRules.vue'
+import ResultsList from '@/components/ResultsList.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    WordRules,
+    ResultsList
   }
 }
 </script>
+
+<style lang="stylus">
+
+header
+  width 100%
+  margin-bottom 5em
+
+main
+  display flex
+</style>
